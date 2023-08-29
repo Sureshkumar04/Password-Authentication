@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: rgb(235, 235, 235);
+}
+
+.container{
+    width: 300px;
+    height: max-content;
+    padding: 3rem;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.container h1{
+    font-size: 1.3rem;
+}
+
+.password{
+    position: relative;
+    margin-top: 2rem;
+}
+
+.password input{
+    outline: 0;
+    border: 0;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid rgb(73, 75, 189) ;
+    width: 280px;
+    font-weight: 500;
+}
+
+.password img{
+    width: 1.3rem;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.password input:focus{
+    box-shadow: 0 0 4px rgba(73, 75, 189, 0.616);
+}
+
+
+.pass-label, .Cpass-label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-size: 0.8rem;
+    transform: translateY(-50%);
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.labelAnimation, .password input:focus + label{
+    top: 0%;
+    background-color: white;
+    padding: 0 0.5vmin;
+}
+
+.warning{
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    font-weight: 600;
+}
+
+.eightchar{
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    font-weight: 600;
+}
+
+button{
+    margin-top: 1rem;
+    border: 0;
+    outline: 0;
+    background-color: rgb(73, 75, 189);
+    width: 100%;
+    padding: 0.6rem 0;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: green;
+}
+
+.submit{
+    top: -100px;
+    width: 350px;
+    height: 100px;
+    background-color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: scale(0);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.247);
+    transition: 0.5s;
+}
+
+.submit2{
+    display: flex;
+    transform: scale(1);
+    top: 20px;
+}
+
+.subcontent{
+    display: flex;
+    align-items: center;
+}
+#subImg{
+    width: 30px;
+    margin-right: 1rem;
+}
+
+.submit i{
+    font-size: 1.2rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+
+.shake{
+    animation: shake .5s 1 ease-in-out;
+}
+
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
